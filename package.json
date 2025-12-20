@@ -1,0 +1,46 @@
+{
+  "name": "remove-leading-spaces",
+  "displayName": "Remove Leading Spaces",
+  "description": "Remove all leading spaces from the current file",
+  "version": "1.0.0",
+  "publisher": "adir-ratzon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adir-ratzon/vscode-remove-leading-spaces"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:removeLeadingSpaces.remove"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "removeLeadingSpaces.remove",
+        "title": "Remove Leading Spaces"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "removeLeadingSpaces.remove",
+        "key": "cmd+alt+l",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+} 
