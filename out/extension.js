@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.deactivate = exports.activate = void 0;
 const vscode = require("vscode");
 function activate(context) {
-    const removeLeadingSpaces = vscode.commands.registerCommand('removeEmptySpaces.removeLeading', () => {
+    const removeLeadingSpaces = vscode.commands.registerCommand('removeWhiteSpaces.removeLeading', () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
             vscode.window.showErrorMessage('No active editor found');
@@ -36,7 +36,7 @@ function activate(context) {
             }
         });
     });
-    const removeTrailingSpaces = vscode.commands.registerCommand('removeEmptySpaces.removeTrailing', () => {
+    const removeTrailingSpaces = vscode.commands.registerCommand('removeWhiteSpaces.removeTrailing', () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
             vscode.window.showErrorMessage('No active editor found');
@@ -75,7 +75,7 @@ function activate(context) {
             }
         });
     });
-    const removeBothSpaces = vscode.commands.registerCommand('removeEmptySpaces.removeBoth', () => {
+    const removeBothSpaces = vscode.commands.registerCommand('removeWhiteSpaces.removeBoth', () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
             vscode.window.showErrorMessage('No active editor found');
