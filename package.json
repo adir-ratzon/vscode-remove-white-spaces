@@ -1,12 +1,12 @@
 {
-  "name": "remove-leading-spaces",
-  "displayName": "Remove Leading Spaces",
-  "description": "Remove all leading spaces from the current file",
+  "name": "remove-white-spaces",
+  "displayName": "Remove Empty Spaces",
+  "description": "Remove leading and trailing whitespace from the current file",
   "version": "1.0.0",
   "publisher": "adir-ratzon",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adir-ratzon/vscode-remove-leading-spaces"
+    "url": "https://github.com/adir-ratzon/vscode-remove-white-spaces"
   },
   "engines": {
     "vscode": "^1.74.0"
@@ -15,20 +15,40 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:removeLeadingSpaces.remove"
+    "onCommand:removeWhiteSpaces.removeLeading",
+    "onCommand:removeWhiteSpaces.removeTrailing",
+    "onCommand:removeWhiteSpaces.removeBoth"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "removeLeadingSpaces.remove",
+        "command": "removeWhiteSpaces.removeLeading",
         "title": "Remove Leading Spaces"
+      },
+      {
+        "command": "removeWhiteSpaces.removeTrailing",
+        "title": "Remove Trailing Spaces"
+      },
+      {
+        "command": "removeWhiteSpaces.removeBoth",
+        "title": "Remove Both Leading and Trailing Spaces"
       }
     ],
     "keybindings": [
       {
-        "command": "removeLeadingSpaces.remove",
+        "command": "removeWhiteSpaces.removeLeading",
         "key": "cmd+alt+l",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "removeWhiteSpaces.removeTrailing",
+        "key": "cmd+alt+t",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "removeWhiteSpaces.removeBoth",
+        "key": "cmd+alt+e",
         "when": "editorTextFocus"
       }
     ]
