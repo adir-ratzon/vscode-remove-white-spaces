@@ -1,21 +1,31 @@
-# Remove Leading Spaces Extension
+# Remove Empty Spaces Extension
 
-A VS Code extension that removes lines containing only whitespace (spaces and tabs), replacing them with empty lines.
+A VS Code extension that removes leading and trailing whitespace from files. Remove lines containing only whitespace, trailing whitespace, or both.
 
 ## Features
 
 - Remove lines that contain only whitespace (spaces and tabs), replacing them with empty lines
-- Configurable keyboard shortcut: `CMD+Option+L` (Mac) / `Ctrl+Alt+L` (Windows/Linux)
-- Command palette support: "Remove Leading Spaces"
+- Remove trailing whitespace from lines
+- Remove both leading and trailing whitespace in one operation
+- Configurable keyboard shortcuts:
+  - `CMD+Option+L` (Mac) / `Ctrl+Alt+L` (Windows/Linux) - Remove leading whitespace
+  - `CMD+Option+T` (Mac) / `Ctrl+Alt+T` (Windows/Linux) - Remove trailing whitespace
+  - `CMD+Option+E` (Mac) / `Ctrl+Alt+E` (Windows/Linux) - Remove both
+- Command palette support for all commands
 
 ## Usage
 
-### Via Keyboard Shortcut
-- Press `CMD+Option+L` (Mac) or `Ctrl+Alt+L` (Windows/Linux) while editing a file
+### Via Keyboard Shortcuts
+- Press `CMD+Option+L` to remove leading whitespace (lines with only whitespace)
+- Press `CMD+Option+T` to remove trailing whitespace
+- Press `CMD+Option+E` to remove both leading and trailing whitespace
 
 ### Via Command Palette
 1. Open the Command Palette (`CMD+Shift+P` on Mac, `Ctrl+Shift+P` on Windows/Linux)
-2. Type "Remove Leading Spaces"
+2. Type "Remove" and select the desired command:
+   - "Remove Leading Spaces"
+   - "Remove Trailing Spaces"
+   - "Remove Both Leading and Trailing Spaces"
 3. Press Enter
 
 ## Installation
@@ -30,7 +40,7 @@ A VS Code extension that removes lines containing only whitespace (spaces and ta
 To create a `.vsix` file for distribution:
 1. Install the `vsce` tool: `npm install -g vsce`
 2. Run `vsce package` to create the `.vsix` file
-3. Install the extension using `code --install-extension remove-leading-spaces-1.0.0.vsix`
+3. Install the extension using `code --install-extension remove-white-spaces-1.0.0.vsix`
 
 ## Development
 
